@@ -1,207 +1,245 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Responsive Portfolio Website</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/custom.js"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-		<script src="js/typed.min.js"></script>
-		
-	</head>
-	<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/185d87df50.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = "header">
+        <div class = "container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li> <a href ="#header" > Home</a></li>
+                    <li> <a href ="#about" > About</a></li>
+                    <li> <a href ="#services" > Services</a></li>
+                    <li> <a href ="#portfolio" > portfolio</a></li>
+                    <li> <a href ="#contact" > Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul> 
 
-		<header>
-			<nav> 
-				<div class='logo'>PORTFO<span>LIO</span></div>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1> Hi, I am Puspa <span>Shakya</span> <br> from Nepal</h1>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------about------------------>
 
-				<div class="menu">
-					<a href="#"> Home</a>
-					<a href="#"> About</a>
-					<a href="#"> Skills</a>
-					<a href="#"> Services</a>
-					<a href="#"> Contacts</a>
-					</div>
-			</nav>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg">
 
-			<div class="text">
-				<p>Hello, I am </p>
-				<p>Puspa Shakya</p>
-				<p>And I am a <span id="ani" style="color: #e74c3c;"></span></p>
-				<button class="c-btn">Hire me</button>
-			</div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <p> I am software Developer, I have develped the e-commerce site as my project and time management system of my school project.
+                        I have the skill of the python, java, php. My passion is to make the software that make the daily life style easy and convinent.
 
-			
-			
-			</header>
-			<section id="about">
-				<div class="section-info">
-					<h1>About</h1>
-					<p>Who am I?</p>
-				</div>
+                        <br>ソフトウェア　エンジニア　です。C,Java,PHP,Database,python,CSS,laravel　など　言語を使ってE-commerce　プロジェクトと学校とか会社のタイムマネジメントのソフトウェアを開発しました。
+                        色々なソフトウェアを作って日常生活を簡単にするもくてきです。最新の技術に興味があります。
+                
+                    </p>
 
-				<div class="about-row">
-					<div class="about-left-col">
-						<img src="images/about.jpg">
-					</div>
-					<div class="about-right-col">
-						<p id="p-title">
-							Hello, I'm Puspa and I am <span id="ani2" style="color: #e74c3c;">
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experince')">Experince</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li> <span>Networking</span>Basic Setup</li>
+                            <li> <span>WebDeveloping</span>Frontend/Backend using framework like dotnet, laravel, django</li>
+                            <li> <span>MobileApplication</span>flutter dotnet mobile application </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experince">
+                        <ul>
+                            <li> <span>Networking</span>Basic Setup on the college and office and home appliance  </li>
+                            <li> <span>WebDeveloping</span>Project of college on e-commerce and time management <br> web applicatio on the django frame workk</li>
+                            <li> <span>MobileDeveloping</span>mobile application in flutter </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li> <span>SLC</span> Vinayak Shikasha Niketan English Secondary School</li>
+                            <li> <span>High School (+2) </span> Seabird International College</li>
+                            <li> <span>Japanese Language School</span>  Tamagawa International Japanese Language School</li>
+                            <li> <span>University</span>  Daiichi Institute of Technology(3years)</li>
+                            <li> <span>TU(Tribhuvan University)</span>  Nims College(present)</li>
+                            
+                            
+                        </ul>
+                    </div>
 
-						</p>
-						<p>
-							I am intreseted in sceiene and technology and I am strongly passonate in IT.
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!------------------------services----------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title"> My services </h1>
+            <div class="services-list">
+                
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Networking</h2>
+                    <P> I can do simple lab set up or the home network setup.  </P>
+                    <a href="#"> Learn more</a> 
+                </div>
+                
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developing</h2>
+                    
+                    <P> Web developing as a full stack developer </P>
+                    <a href="#"> Learn more</a> 
+                </div>
+                
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Mobile MobileApplication</h2>
+                    
+                    <P> Mobile application developing by using different platform </P>
+                    <a href="#"> Learn more</a> 
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
-							</p>
-							<button class="c-btn">Download CV</button>
+    <!------------------portfolio------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p> the app connect you to the talened people aeround the world  
+                            Download form the web store
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p> the app connect you to the talened people aeround the world  
+                            Download form the web store
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>time management system</h3>
+                        <p> the app connect you to the talened people aeround the world  
+                            Download form the web store
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a> 
+            
+        </div>
+    </div>
+    <!---------------contact--------------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>puspashakya123@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i></i>012345600</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/aalam.puspa"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Puspashakya"><a href=""><i class="fa-brands fa-github"></i></a></i></a>
+                        <a href="https://www.linkedin.com/in/puspa-shakya-01a522249/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                    <div class="contact-right"></div>
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your message">
 
-					</div>
-				</div>
-			</section>
-			<section id="skills">
-				<div class="section-info">
-					<h1 style="color: white;">Skills</h1>
-					<p>Who am I?</p>
-				</div>
-				<div class="Skills-row">
-					<div class="skills-left-col">
-						<p>
-							IOT is the study of internet of things where we wil be talking with machine. As we speak to our mom "mon! i forget to turn off the swith can you do it pleas". Or the vice versa son buy me a salt returning home.
-						</p>
-						<button class="c-btn">Read More</button>
-					</div>
-					<div class="skills-right-col"></div>
-					<div class="progress-div">
-						<p>
-						<span>HTML</span><br>
-						<progress value="80" max="100"></progress>
-						<span>80%</span>
-						</p>
+                            </textarea>
+                            <button type="submit" class="btn btn2"> Submit</button>
+                        </form>  
+                        <span id="msg"></span>
+                
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright p . Made<i class="fa-solid fa-heart"></i> with the Vs code</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 
-						<p>
-							<span>CSS</span><br>
-							<progress value="80" max="100"></progress>
-							<span>80%</span>
-							</p>
-
-							<p>
-								<span>HTML</span><br>
-								<progress value="80" max="100"></progress>
-								<span>80%</span>
-								</p>
-
-								<p>
-									<span>HTML</span><br>
-									<progress value="80" max="100"></progress>
-									<span>80%</span>
-									</p>
-
-									<p>
-										<span>HTML</span><br>
-										<progress value="80" max="100"></progress>
-										<span>80%</span>
-										</p>
-
-
-					</div>
-					
-
-				</div>
-
-			</section>
-
-			<section id="services">
-				<div class="section-info">
-					<h1>Services</h1>
-					<p>What we Provide</p>
-				</div>
-
-				<div class="services-row">
-					<div class="services-box" data-tilt>
-						<img src="images/b2.png">
-						<h2>Web Design</h2>
-						<p>
-							Android Developer are those people who are makeing application for the android 
-						</p>
-					</div>
-					<div class="services-box" data-tilt>
-						<img src="images/b2.png">
-						<h2>Web Development</h2>
-						<p>
-							Android Developer are those people who are makeing application for the android 
-						</p>
-					</div>
-					<div class="services-box" data-tilt>
-						<img src="images/b2.png">
-						<h2>Apps Development</h2>
-						<p>
-							Android Developer are those people who are makeing application for the android 
-						</p>
-					</div>
-					
-				</div>
-
-				<section id="contacts">
-					<div class="section-info" style="color: blue">
-						<h1>Get in Touch</h1>
-						<p style="color: black;">We are avaliable</p>
-					</div>
-
-					<div class="contacts -row">
-						<div class="contact-left-col"></div>
-						<img src="images/b3.png">
-						<div class="contact-right-col">
-							<form>
-								<h2>Connect with us</h2>
-								<input type="text" name="" placeholder="Name">
-								<input type="email" name=""placeholder="E-mail">
-								<br>
-								<textarea cols="40" rows="10" placeholder="Message"></textarea>
-								<br>
-								<button class="c-btn"> Submit</button>
-							</form>
-							
-						</div>
-						
-					</div>
-				</section>
-				<section id="footer"> 
-					<h2>Developed by <br> Puspa Shakya</h2>
-					<img src="images/icon.png" width="100">
-				</section>
-
-				<script scr="js/jquery.ripples-min.js"></script>
-				<script>
-					jQuery(document).ready(function(){
-						$('header').ripples({
-  dropRadius: 20,
-  perturbance: 0.03,
-
-});
-	});
-				</script>
-
-				<script> 
-				let animate= new Typed('#ani', {
-					strings:["Front End Developer", "Blogger", "Programmer"],
-					typeSpeed:100,
-					backSpeed:100,
-					loop:true,
-				})
-				</script>
-
-			</script>
-
-<script> 
-let animat= new Typed('#ani2', {
-	strings:["Front End Developer", "Blogger", "Programmer"],
-	typeSpeed:100,
-	backSpeed:100,
-	loop:true,
-})
-</script>
-
-<script src="js/tilt.jquery.min.js"></script>
-
-			</body>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+        
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz9hhBiH6bRbcI1QItKKl2DzsFg5v0CZPgu-aL1ZUdAMDuD6e9n_gEkfPzoi-nF_3fa/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
 </html>
